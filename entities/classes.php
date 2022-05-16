@@ -11,4 +11,33 @@ class Product {
         $this->price = $_price;
     }
 }
+
+class GuestAccount {
+
+    public $name;
+    public $surname;
+    public $address;
+    public $discount = false;
+    public $total = 100;
+
+    public function totalPrice() {
+        if($this->discount) {
+            $discountPrice = $this->total * (20 / 100);
+            return $this->total - $discountPrice; 
+
+        } else {
+            return $this->total;
+        }
+    }
+}
+
+class MemberAccount extends GuestAccount {
+
+    public $discount = true;
+    public $orderHistory;
+    protected $dateOfBirth;
+    protected $email;
+    protected $phone;
+
+}
 ?>
