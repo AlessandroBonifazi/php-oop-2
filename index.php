@@ -11,10 +11,16 @@ Il focus è sulla parte di slide condivisa oggi su Drive. -->
     $product = new Product('collare', 'accessorio', 20);
     var_dump($product);
 
-    $guest = new GuestAccount();
+    $guest = new GuestAccount('Mario', 'Rossi', 'via di qua', 00000, 2032);
+    var_dump($guest);
     echo('<p>totale ospite '.$guest->totalPrice().'€</p>');
-    $member = new MemberAccount();
+    $member = new MemberAccount('Mario', 'Rossi', 'via di qua', 00000, 2019);
     echo('<p>totale account registrato '.$member->totalPrice().'€</p>');
+
+    echo($guest->cardCheck());
+    echo($member->cardCheck());
+
+   
 
 
 ?>
