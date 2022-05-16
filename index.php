@@ -6,5 +6,9 @@ Dividete bene in classi e implementate gli attributi e i metodi necessari per il
 Il focus è sulla parte di slide condivisa oggi su Drive. -->
 
 <?php
-phpinfo();
+    include 'entities/classes.php';
+
+    $product = new Product('collare', 'accessorio', 20);
+    var_dump($product);
+
 ?>
